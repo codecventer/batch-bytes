@@ -1,0 +1,5 @@
+# Ignore artifacts:
+data
+logs
+misc
+node_modules

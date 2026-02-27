@@ -1,0 +1,47 @@
+{
+  "name": "batch-bytes",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Compact JavaScript application for sending bulk communication such as emails, SMS and WhatsApp messages.",
+  "main": "src/index.js",
+  "engines": {
+    "node": "^22.12.0"
+  },
+  "scripts": {
+    "index": "node src/index.js",
+    "prune": "npm prune --dry-run",
+    "cache": "npm cache clean --force && rm -rf node_modules/ && rm -f package-lock.json && npm install && npm run prune",
+    "prettier": "npx prettier . --write",
+    "lint": "eslint 'src/**/*.js'",
+    "format": "npm run prettier && npm run lint",
+    "clean": "npm run cache && npm run prettier && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codecventer/batch-bytes.git"
+  },
+  "author": "Christiaan Venter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codecventer/batch-bytes/issues"
+  },
+  "homepage": "https://github.com/codecventer/batch-bytes#readme",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.731.1",
+    "@aws-sdk/client-s3": "^3.726.1",
+    "@aws-sdk/client-ses": "^3.716.0",
+    "@aws-sdk/client-sns": "^3.716.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "html-format": "^1.1.7",
+    "obscenity": "^0.4.1",
+    "prompts": "^2.4.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "prettier": "3.4.2"
+  }
+}
